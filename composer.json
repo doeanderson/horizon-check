@@ -1,0 +1,44 @@
+{
+    "name": "doeanderson/horizon-check",
+    "description": "Scheduled health check that reports an exception when Laravel Horizon is not running",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.3",
+        "illuminate/console": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "laravel/horizon": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DoeAnderson\\HorizonCheck\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DoeAnderson\\HorizonCheck\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DoeAnderson\\HorizonCheck\\HorizonCheckServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^4.0|^5.0"
+    }
+}
